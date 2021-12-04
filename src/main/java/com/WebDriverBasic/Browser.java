@@ -16,6 +16,7 @@ public class Browser {
     public static void chrome_launch(){
         System.setProperty("webdriver.chrome.driver","./src/main/resources/Drivers/chromedriver.exe");
         driver=new ChromeDriver();
+        driver.manage().window().maximize();
     }
     public static void firefox_launch(){
         System.setProperty("webdriver.gecko.driver","./src/main/resources/Drivers/geckodriver.exe");
@@ -27,6 +28,4 @@ public class Browser {
     public static void chrome_close(){
         driver.close();
     }
-
-
 }
