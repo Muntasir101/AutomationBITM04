@@ -2,8 +2,10 @@ package com.WebDriverBasic;
 
 import com.Base.BaseClass;
 
+import java.io.IOException;
+
 public class TitleUrlVerify extends BaseClass {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         firefox_launch();
         open_URL("https://google.com");
         title_verification();
@@ -11,7 +13,7 @@ public class TitleUrlVerify extends BaseClass {
         firefox_close();
 
     }
-    public static void title_verification(){
+    public static void title_verification() throws IOException {
         String ExpectedTitle="Facebook";
        String ActualTitle= driver.getTitle();
 
@@ -20,6 +22,7 @@ public class TitleUrlVerify extends BaseClass {
        }
        else {
            System.out.println("Title did not match.Test Failed!!.");
+           getVisiblePartScreenshots("TitleBug");
        }
     }
 
