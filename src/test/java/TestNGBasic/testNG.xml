@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="Login Test Suite">
+
+    <test name="Login Functional Test - Firefox">
+        <parameter name="BrowserName" value="Firefox"></parameter>
+        <classes>
+            <class name="CrossBrowser.CB_LoginTest"></class>
+        </classes>
+    </test>
+
+    <test name="Login Functional Test - Chrome">
+        <parameter name="BrowserName" value="Chrome"></parameter>
+        <classes>
+            <class name="CrossBrowser.CB_LoginTest"></class>
+        </classes>
+    </test>
+
+    <test name="Login Functional Test - Edge">
+        <parameter name="BrowserName" value="Edge"></parameter>
+        <classes>
+            <class name="CrossBrowser.CB_LoginTest"></class>
+        </classes>
+    </test>
+
+</suite>
+
+
+
